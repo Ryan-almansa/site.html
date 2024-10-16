@@ -11,3 +11,37 @@ h1 {
     color: #343a40c9;
 }
 
+/************animation*******/
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b77b3; /* Couleur de fond claire */
+  }
+  
+  .welcome-message {
+    opacity: 0; /* L'élément commence invisible */
+    transform: translateY(50px); /* Position de départ plus basse */
+    animation: fadeInUp 1.5s ease-out forwards; /* Animation avec un effet de fondu et montée */
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px); /* Position de départ */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Position finale */
+    }
+  }
+  
+  #main-title {
+    font-size: 3rem;
+    color: #3f4953; /* Texte en gris foncé */
+    font-family: 'Arial', sans-serif;
+  }
+  
