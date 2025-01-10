@@ -1,76 +1,7 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: aqua;
 }
-
-.navbar {
-    margin-bottom: 20px;
-}
-
-
-h1 {
-    color: #343a40c9;
-}
-
-/**************colone2 paintball page ***************/
-.left-colonne-2, .right-colonne {
-  width: 45%;
-  background-color: #4d638571;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Styles de base */
-body {
-  font-family: 'Poppins', sans-serif; /* Utilise une police moderne */
-  background: linear-gradient(to right, #f0f4f8, #d9e2ec); /* Dégradé subtil pour l'arrière-plan */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/****************Conteneur du leader ******************/
-.leader-container {
-  background: linear-gradient(135deg, #4a90e2, #9013fe); 
-  padding: 20px;
-  border-radius: 10px; 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
-  text-align: center;
-  max-width: 500px; 
-  width: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/********************* Effet au survol ***********************/
-.leader-container:hover {
-  transform: translateY(-5px); /* Légère levée au survol */
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-}
-
-/************************* Texte du leader ***********************************/
-.leader-text {
-  font-size: 1.5em; 
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 0;
-  line-height: 1.2em; /* Ajuste l'interligne */
-  animation: glow 1.5s infinite; /* Animation pour un effet de brillance */
-}
-  
-
-/********************************Animation de brillance**************** */
-@keyframes glow {
-  0% {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-  }
-  50% {
-      text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
-  }
-  100% {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-  }
+h1{
+  color:red;
 }
