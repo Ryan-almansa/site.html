@@ -1,3 +1,31 @@
+function envoyerUntruc() {
+  let valeurDeMonChamp = document.getElementById("leNom");
+  fetch("http://192.168.65.113:8080/AddMedecin",
+      {
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          method: "POST",
+          body: JSON.stringify({"nom": valeurDeMonChamp})
+      })
+      .then(function(res){ console.log(res) })
+      .catch(function(res){ console.log(res) })  
+}
+
+var monBouton = document.getElementById("lebuton"); 
+monBouton.addEventListener("click", envoyerUntruc);
+
+
+
+
+
+
+
+
+
+
+
 // Récupérer l'élément où afficher la liste des médecins
 var ladivMagique = document.getElementById("idListeMedecin");
 
