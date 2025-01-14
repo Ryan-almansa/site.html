@@ -13,7 +13,7 @@ function envoyerUntruc() {
       .catch(function(res){ console.log(res) })  
 }
 
-var monBouton = document.getElementById("lebuton"); 
+var monBouton = document.getElementById("LeNom"); 
 monBouton.addEventListener("click", envoyerUntruc);
 
 
