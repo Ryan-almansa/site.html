@@ -14,7 +14,10 @@ function envoyerUntruc() {
 }
 
 var monBouton = document.getElementById("LeNom"); 
+
 monBouton.addEventListener("click", envoyerUntruc);
+
+
 
 
 
