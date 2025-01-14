@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -6,15 +7,24 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <body>
-    <h1 id="id1" class="classTiti"> APPEL API</h1>
-    <div id="idListeMedecin">Chargement des Medecin</div>
+    <header>
+        <h1 id="id1" class="main-title">APPEL API</h1>
+    </header>
 
-<input type="text" id="LeNom"><input type="button" value="Go">
+    <main>
+        <section class="content">
+            <div id="idListeMedecin" aria-live="polite" class="loading-message">
+                Chargement des Médecins...
+            </div>
 
+            <form class="search-form">
+                <label for="LeNom" class="form-label">Nom du médecin :</label>
+                <input type="text" id="LeNom" class="form-input" placeholder="Entrez un nom">
+                <button type="button" class="form-button">Go</button>
+            </form>
+        </section>
+    </main>
 
-
-
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
