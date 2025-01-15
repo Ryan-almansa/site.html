@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site API</title>
+    <title>test</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header>
-        <h1 id="id1" class="main-title">APPEL API</h1>
+        <h1>Bienvenue sur le site</h1>
     </header>
 
     <main>
-        <section class="content">
-            <div id="idListeMedecin" aria-live="polite" class="loading-message">
-                Chargement des Médecins...
-            </div>
+        <section>
+            <h2>Liste des Médecins</h2>
+            <div id="idListeMedecin">Chargement des médecins...</div>
+        </section>
 
-            <form class="search-form">
-                <label for="LeNom" class="form-label">Nom du médecin :</label>
-                <input type="text" id="LeNom" class="form-input" placeholder="Entrez un nom">
-                <button type="button" class="form-button">Go</button>
+        <section>
+            <h2>Ajouter un Médecin</h2>
+            <form id="formAddMedecin">
+                <label for="leNom">Nom :</label>
+                <input type="text" id="leNom" name="nom" placeholder="Entrez le nom" required>
+                <label for="lePrenom">Prénom :</label>
+                <input type="text" id="lePrenom" name="prenom" placeholder="Entrez le prénom" required>
+                <button id="lebutton">Ajouter</button>            
             </form>
         </section>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
