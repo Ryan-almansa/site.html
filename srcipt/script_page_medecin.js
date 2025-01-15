@@ -37,7 +37,7 @@ function chargerListeMedecins() {
         ['ID', 'Nom', 'Prénom'].forEach(headerText => {
           const th = document.createElement('th');
           th.textContent = headerText;
-          th.style.border = "1px solid #ccc"; // Ajout d'une bordure légère
+          th.style.border = "1px solid #ccc"; // Bordure légère
           th.style.padding = "8px"; // Espacement autour du texte
           th.style.textAlign = "left"; // Alignement du texte à gauche
           headerRow.appendChild(th);
@@ -73,8 +73,17 @@ function chargerListeMedecins() {
         });
         table.appendChild(tbody);
     
-        // Ajouter le tableau à la div
-        ladivMagique.appendChild(table);
+        // Ajouter un conteneur pour le défilement
+        const tableContainer = document.createElement('div');
+        tableContainer.style.maxHeight = "300px"; // Limiter la hauteur du tableau
+        tableContainer.style.overflowY = "auto"; // Activer le défilement vertical
+        tableContainer.style.border = "1px solid #ccc"; // Ajouter une bordure autour du conteneur
+    
+        // Ajouter le tableau dans le conteneur
+        tableContainer.appendChild(table);
+    
+        // Ajouter le conteneur avec le tableau à la div
+        ladivMagique.appendChild(tableContainer);
       } else {
         ladivMagique.innerHTML = "Aucun médecin trouvé.";
       }
@@ -85,6 +94,7 @@ function chargerListeMedecins() {
       // Afficher un message d'erreur
       ladivMagique.innerHTML = "Une erreur est survenue lors du chargement des médecins.";
     });
+    
   }    
 
 chargerListeMedecins();
