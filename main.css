@@ -1,99 +1,192 @@
-/* Style de base */
+/* Par défaut, cache le site */
 body {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* Quand le site est chargé */
+body.site-loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+/* Réinitialisation des marges et bordures */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corps global */
+body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
   line-height: 1.6;
-}
-
-header {
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  padding: 1.5rem 0;
-}
-
-.main-title {
-  margin: 0;
-  font-size: 2.5rem;
-  letter-spacing: 1px;
-}
-
-/* Contenu principal */
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-.content {
-  text-align: center;
-}
-
-.loading-message {
-  font-size: 1.2rem;
-  color: #757575;
-  margin-bottom: 1.5rem;
-}
-
-/* Formulaire de recherche */
-.search-form {
+  color: #333;
+  background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  min-height: 100vh;
 }
 
-.form-label {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.form-input {
-  width: 100%;
-  max-width: 400px;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-.form-input:focus {
-  border-color: #4CAF50;
-  outline: none;
-}
-
-.form-button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+/* Header */
+header {
+  background-color: #2c3e50;
   color: white;
-  background-color: #4CAF50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ecf0f1;
+  transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
+  color: #1abc9c;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #1abc9c;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.form-button:hover {
-  background-color: #45a049;
+.nav-toggle-bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ecf0f1;
 }
 
-.form-button:active {
-  background-color: #3e8e41;
+/* Hero Section */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero {
+  background-color: #ecf0f1;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .main-title {
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #2c3e50;
+      width: 100%;
+      padding: 1rem 0;
+  }
+
+  .nav-menu.show {
+      display: flex;
+  }
+
+  .nav-toggle {
+      display: flex;
+  }
+
+  .hero h1 {
       font-size: 2rem;
   }
 
-  .form-input {
-      width: 90%;
+  .hero p {
+      font-size: 1rem;
   }
 }
+
+
+/* Animation pour le texte de bienvenue */
+@keyframes fadeInScale {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Application de l'animation */
+.hero h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  animation: fadeInScale 2s ease-in-out forwards; /* Animation appliquée */
+}
+

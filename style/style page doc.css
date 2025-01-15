@@ -1,0 +1,9 @@
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: auto; /* Permet au footer de rester collé en bas */
+}
