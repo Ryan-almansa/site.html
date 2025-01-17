@@ -86,6 +86,38 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-item .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid #FFD700;
+}
+
+
 .hero h1 {
     font-size: 2.5rem;
     color: #4CAF50;

@@ -4,14 +4,14 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f9f9f9;
+    background: linear-gradient(to bottom, #f6f6f6, #eaeaea);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 header {
-    background-color: #007BFF;
+    background-color: #0A2742; /* Bleu foncé */
     padding: 1rem 2rem;
     color: white;
     text-align: center;
@@ -47,7 +47,7 @@ header {
 }
 
 .hero {
-    background-color: #007BFF;
+    background: linear-gradient(to bottom right, #0A2742, #004B87);
     color: white;
     padding: 2rem 1rem;
     text-align: center;
@@ -70,7 +70,7 @@ header {
 
 .about h2, .values h2, .team h2 {
     font-size: 2rem;
-    color: #007BFF;
+    color: #0A2742;
     margin-bottom: 1rem;
 }
 
@@ -85,7 +85,7 @@ header {
 }
 
 .values strong {
-    color: #007BFF;
+    color: #0A2742;
 }
 
 .team {
@@ -100,13 +100,18 @@ header {
 }
 
 .team-member {
-    background-color: white;
+    background: linear-gradient(to top, #fefefe, #f6f6f6);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
     width: 300px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
 }
 
 .team-member img {
@@ -123,7 +128,7 @@ header {
 }
 
 footer {
-    background-color: #007BFF;
+    background-color: #0A2742;
     color: white;
     text-align: center;
     padding: 1rem;
