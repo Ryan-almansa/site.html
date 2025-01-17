@@ -190,3 +190,48 @@ footer {
   animation: fadeInScale 2s ease-in-out forwards; /* Animation appliquée */
 }
 
+
+
+
+/* Background global pour toutes les pages */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #295177, #20364771);
+  color: #fefefe;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Conteneur principal pour éviter des chevauchements */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Header et Footer Styles */
+header, footer {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.875rem;
+  color: #fefefe;
+  margin: 0;
+}
+
+/* Amélioration des liens sur le fond sombre */
+a {
+  color: #a0c4f3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
